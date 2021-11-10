@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App Projekt</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="budget_numbers">
+            <div class="number" id="earned">
+                <h2>Inkomster</h2>
+
+                <div class="summa_container">
+                    <p id="earned_symbol">kr</p>
+                    <span id="summa_earned">1500</span>
+                </div>
+            </div>
+            <div class="number" id="kostnad">
+                <h2>Kostnader</h2>
+
+                <div class="summa_container">
+                    <p id="avgift_symbol">kr</p>
+                    <span id="summa_avgifter">1500</span>
+                </div>
+            </div>
+            <div class="number" id="Vinst">
+                <h2>Vinst</h2>
+
+                <div class="summa_container">
+                    <p id="tillgänglig_symbol">kr</p>
+                    <span id="summa_tillgänglig">1500</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input_area">
+            <input type="text" id="description" placeholder="Beskrivning">
+            <input type="text" id="value" placeholder="Belopp">
+        </div>
+        <div class="button_container">
+            <button id="add_inkomst">Add Inkomster</button>
+            <button id="add_avgifter">Add Avgifter</button>
+        </div>
+        <div class="items_container">
+            <div id="inkomst_container" class="contianer">
+                <h2>Inkomst</h2>
+
+                <div class="item inkomst">
+                    <h4>Öviga inkomst</h4>
+
+                    <div class="item_inkomst">
+                        <p class="symbol">kr</p>
+                        <span class="inkost_summa">500</span>
+                    </div>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+
+            <div id="avgifter_container" class="contianer">
+                <h2>Avgifter</h2>
+
+                <div class="item kostnad">
+                    <h4>Öviga kostnader</h4>
+
+                    <div class="item_kostnad">
+                        <p class="symbol">kr</p>
+                        <span class="kostnad_summa">500</span>
+                    </div>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
