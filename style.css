@@ -7,12 +7,12 @@
 }
 
 :root {
-  --green: #66ff00;
+  --green: #42a500;
   --red: #ec2226;
 }
 
 body {
-  background-color: cadetblue;
+  background-color: rgb(144, 233, 225);
   font-family: "Montserrat", sans-serif;
   color: black;
 }
@@ -40,4 +40,131 @@ body {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+}
+.summa_container {
+  display: flex;
+}
+
+#summa_earned,
+#earned_symbol {
+  color: var(--green);
+  padding-left: 3px;
+}
+#summa_avgifter,
+#avgift_symbol {
+  color: var(--red);
+  padding-left: 3px;
+}
+.input_area input {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+.input_area #description {
+  width: 350px;
+  font-family: "Montserrat", sans-serif;
+}
+.input_area #value {
+  width: 100px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+// *remove arrows from number input *//
+
+.input_area input::-webkit-outer-spin-button,
+.input_area input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.button_container {
+  margin: 10px 0 3rem;
+}
+.button_container #add_inkomst,
+#add_avgifter {
+  border: none;
+  padding: 10px 15px;
+  color: #ffff;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+#add_inkomst {
+  background-color: var(--green);
+}
+#add_avgifter {
+  background-color: var(--red);
+}
+.items_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 70%;
+  max-width: 700px;
+}
+#inkomst_container h2 {
+  color: var(--green);
+}
+#avgifter_container h2 {
+  color: var(--red);
+}
+.items_container .contianer {
+  width: 49%;
+  border-radius: 10px;
+}
+.contianer .item {
+  width: 100%;
+  background-color: #ffff;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+}
+.item_inkomst,
+.item_kostnad {
+  display: flex;
+}
+.inkomst span,
+.inkomst p {
+  color: var(--green);
+}
+.kostnad span,
+.kostnad p {
+  color: var(--red);
+}
+.item .far {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  background-color: var(--red);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  transform: translateX(30px);
+  opacity: 0;
+}
+.item:hover .far {
+  animation: visaRadera;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes visaRadera {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
